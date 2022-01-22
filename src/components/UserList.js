@@ -20,32 +20,32 @@ const UserList = () => {
     return (
         <div>
             
-            <table key="id">
+            <table className="table" key={listOfUSer.id}>
                 <thead>
-                    
+                    <tr>
                         <th>id</th>
                         <th>name</th>
                         <th>username</th>
                         <th>email</th>
                         <thead>
-                                <th>street</th>
-                                <th>suite</th>                       
-                                <th>city</th>
-                                <th>zipcode</th>
-                               
-                        </thead>
-                            <th>lat</th>
-                            <th>lng</th>
-                            <th>phone</th>
-                            <th>website</th>
-                        <thead>
-                            <label>company</label>
-                            <th>name</th>
-                            <th>catchPhrase</th>
-                            <th>bs</th>
+                            <h3>Adresse</h3>
+                                <tr>
+                                    <th>street</th>
+                                    <th>suite</th>                       
+                                    <th>city</th>
+                                    <th>zipcode</th>
+                                </tr>  
+                    </thead>
+                                                
+                                <th>lat</th>
+                                <th>lng</th>
+                                <th>phone</th>
+                                <th>website</th>
+                                <th>name</th>
+                                <th>catchPhrase</th>
+                                <th>bs</th>
                             
-                        </thead>
-                
+                </tr>
                 </thead>
                 {listOfUSer.map(list => (
                     <tbody>
@@ -66,11 +66,11 @@ const UserList = () => {
                                 
                                 <td> {list.phone} </td>
                                 <td> {list.website} </td>
-                                <tr>
+                               
                                     <td> {list.company.name} </td>
                                     <td> {list.company.catchPhrase} </td>
                                     <td> {list.company.bs} </td>
-                                </tr>
+                                
                             
                         </tr>
                     </tbody>
